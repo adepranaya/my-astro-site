@@ -1,0 +1,45 @@
+---
+import Footer from '../components/Footer.vue';
+import Navbar from '../components/Navbar.astro';
+import { SEO } from 'astro-seo';
+const metaDesc =
+  "My name is Ade Pranaya, I graduated from Pasundan University. I am Web Designer / Developer. I am very happy with programming especially in Frontend Development so that's why right now I want to focus as Frontend Developer. U can check my last job";
+---
+
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <SEO title="Ade Pranaya" description={metaDesc} />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Montserrat', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex flex-col min-h-screen">
+      <div>
+        <Navbar />
+      </div>
+      <div class="mb-auto">
+        <article class="mx-6 lg:mx-auto lg:max-w-6xl py-6">
+          <slot />
+          <!-- your content is injected here -->
+        </article>
+      </div>
+      <div>
+        <Footer />
+      </div>
+    </div>
+  </body>
+</html>
