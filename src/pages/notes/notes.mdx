@@ -1,0 +1,19 @@
+---
+layout: '../../layouts/MDXLayout.astro' 
+title: Specified input file /src/inpus.css does not exist.
+desc: 'hi'
+created_at: '5 Agustus 2022'
+slug: notes
+---
+
+Getting error when i trying Start the Tailwind CLI build process like the <a href='https://tailwindcss.com/docs/installation' class='text-primary'>docs</a> , 
+
+```javascript
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+```
+
+so the solution is just remove the first slash from the path like this 
+
+```javascript
+npx tailwindcss -i src/inpus.css -o dist/output.css --watch
+```

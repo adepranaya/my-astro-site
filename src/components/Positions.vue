@@ -25,7 +25,7 @@
                   v-if="typeof el.deskripsi === 'object'"
                   class="list-disc ml-4"
                 >
-                  <li v-for="(desc, iD) in el.deskripsi" :key="iD" class="mb-2">
+                  <li v-for="(desc, iD) in el.deskripsi" :key="iD" class="mb-2 break-normal">
                     {{ desc }}
                   </li>
                 </ul>

@@ -1,0 +1,18 @@
+---
+const posts = await Astro.glob('./*.mdx');
+import Layout from '../../layouts/default.astro';
+---
+
+<Layout>
+  {
+    posts.map((post) => (
+      <a href={'/blog/' + post.frontmatter.slug}>
+        <h2 class="font-bold text-3xl text-primary">
+          {post.frontmatter.title}
+        </h2>
+        <span class="text-gray-500">{post.frontmatter.created_at}</span>
+        <p>{post.frontmatter.desc}</p>
+      </a>
+    ))
+  }
+</Layout>

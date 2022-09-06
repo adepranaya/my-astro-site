@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@astrojs/mdx": "^0.11.1",
+    "@astrojs/netlify": "^1.0.2",
     "@astrojs/tailwind": "^1.0.0",
     "@astrojs/vue": "^1.0.0",
     "vue": "^3.2.30"

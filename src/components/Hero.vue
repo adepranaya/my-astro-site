@@ -2,10 +2,10 @@
 import SocMed from './SocMed.vue';
 </script>
 <template>
-  <div class="flex justify-between mt-20 mb-44 ">
-    <div class="self-center flex flex-col gap-4">
+  <div class="flex justify-between mt-20 mb-44 flex-wrap flex-col-reverse md:flex-row">
+    <div class="text-center md:text-left self-center flex flex-col gap-4">
       <div class="text-xl md:text-4xl">Hi, I’m</div>
-      <h1 class="text-4xl md:text-6xl font-bold ">
+      <h1 class="text-4xl md:text-6xl font-bold">
         A<span class="text-primary">dePran</span>aya
       </h1>
       <div class="text-xl md:text-4xl">web designer/developer</div>
@@ -30,10 +30,8 @@ import SocMed from './SocMed.vue';
         >
       </div>
     </div>
-    <img
-      src="profile.png"
-      alt
-      class=""
-    />
+    <div class="self-center mb-4">
+      <img src="profile.png" alt class="" />
+    </div>
   </div>
 </template>
