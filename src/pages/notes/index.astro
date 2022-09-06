@@ -5,16 +5,20 @@ import Layout from '../../layouts/default.astro';
 
 <Layout>
   <h1 class="text-4xl text-primary font-bold">Notes</h1>
-  <p>
+  <p class="mb-8">
     this page for my dev notes like errors, tips, etc. If you get the benefits
     I'm participating
   </p>
   {
     posts.map((post) => (
       <a href={'/notes/' + post.frontmatter.slug}>
-        <h2 class="font-bold text-xl text-primary">{post.frontmatter.title}</h2>
-        <span class="text-gray-500">{post.frontmatter.created_at}</span>
-        <p>{post.frontmatter.desc}</p>
+        <div class="border-l-4 pl-4">
+          <h2 class="font-bold text-xl text-primary">
+            {post.frontmatter.title}
+          </h2>
+          <span class="text-gray-500">{post.frontmatter.created_at}</span>
+          <p>{post.frontmatter.desc}</p>
+        </div>
       </a>
     ))
   }

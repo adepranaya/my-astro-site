@@ -4,6 +4,10 @@ import Layout from '../../layouts/default.astro';
 ---
 
 <Layout>
+  <h1 class="text-4xl text-primary font-bold">Blog</h1>
+  <p class="mb-8">
+    
+  </p>
   {
     posts.map((post) => (
       <a href={'/blog/' + post.frontmatter.slug}>
