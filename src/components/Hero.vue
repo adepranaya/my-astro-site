@@ -31,7 +31,7 @@ import SocMed from './SocMed.vue';
       </div>
     </div>
     <div class="self-center mb-4">
-      <img src="profile.png" alt class="" />
+      <img src="/assets/profile.png" alt class="" />
     </div>
   </div>
 </template>

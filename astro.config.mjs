@@ -3,7 +3,7 @@ import vue from "@astrojs/vue";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 
-import netlify from "@astrojs/netlify/functions";
+// import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,6 +18,6 @@ export default defineConfig({
     }
   },
   integrations: [vue(), tailwind(), mdx()],
-  output: "server",
-  adapter: netlify()
+  // output: "server",
+  // adapter: netlify()
 });
