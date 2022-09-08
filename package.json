@@ -19,6 +19,7 @@
     "@astrojs/netlify": "^1.0.2",
     "@astrojs/tailwind": "^1.0.0",
     "@astrojs/vue": "^1.0.0",
+    "astro-robots-txt": "^0.3.8",
     "vue": "^3.2.30"
   }
 }

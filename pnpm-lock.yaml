@@ -7,6 +7,7 @@ specifiers:
   '@astrojs/vue': ^1.0.0
   astro: ^1.1.5
   astro-icon: ^0.7.3
+  astro-robots-txt: ^0.3.8
   astro-seo: ^0.6.0
   vue: ^3.2.30
 
@@ -20,6 +21,7 @@ devDependencies:
   '@astrojs/netlify': 1.0.2
   '@astrojs/tailwind': 1.0.0
   '@astrojs/vue': 1.0.0_vue@3.2.38
+  astro-robots-txt: 0.3.8
   vue: 3.2.38
 
 packages:
@@ -845,6 +847,14 @@ packages:
       svgo: 2.8.0
     dev: false
 
+  /astro-robots-txt/0.3.8:
+    resolution: {integrity: sha512-rx69T8hd79whl4cmGKZCA5KUgWuSU9EKPPqO6RKfIrvDoFpw7sZ/j7EDXWYmT7f+U94oiISNVLnIafmUEkgC5A==}
+    dependencies:
+      deepmerge: 4.2.2
+      valid-filename: 4.0.0
+      zod: 3.18.0
+    dev: true
+
   /astro-seo/0.6.0:
     resolution: {integrity: sha512-nR+dJlAyQhX6s0oAmbBqPq3KCZax/zVAerFsclGiJQ2znOkS/7L+RGjziS4M9Q3OQxm3FMfqIKHp9Ns73Q81ww==}
     dev: false
@@ -1597,6 +1607,11 @@ packages:
     dependencies:
       node-domexception: 1.0.0
       web-streams-polyfill: 3.2.1
+
+  /filename-reserved-regex/3.0.0:
+    resolution: {integrity: sha512-hn4cQfU6GOT/7cFHXBqeBg2TbrMBgdD0kcjLhvSQYYwm3s4B6cjvBfb7nBALJLAXqmU5xajSa7X2NnUud/VCdw==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: true
 
   /fill-range/7.0.1:
     resolution: {integrity: sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==}
@@ -3546,6 +3561,13 @@ packages:
       kleur: 4.1.5
       sade: 1.8.1
 
+  /valid-filename/4.0.0:
+    resolution: {integrity: sha512-VEYTpTVPMgO799f2wI7zWf0x2C54bPX6NAfbZ2Z8kZn76p+3rEYCTYVYzMUcVSMvakxMQTriBf24s3+WeXJtEg==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      filename-reserved-regex: 3.0.0
+    dev: true
+
   /vfile-location/4.0.1:
     resolution: {integrity: sha512-JDxPlTbZrZCQXogGheBHjbRWjESSPEak770XwWPfw5mTc1v1nWGLB/apzZxsx8a0SJVfF8HK8ql8RD308vXRUw==}
     dependencies:
@@ -3740,7 +3762,6 @@ packages:
 
   /zod/3.18.0:
     resolution: {integrity: sha512-gwTm8RfUCe8l9rDwN5r2A17DkAa8Ez4Yl4yXqc5VqeGaXaJahzYYXbTwvhroZi0SNBqTwh/bKm2N0mpCzuw4bA==}
-    dev: false
 
   /zwitch/2.0.2:
     resolution: {integrity: sha512-JZxotl7SxAJH0j7dN4pxsTV6ZLXoLdGME+PsjkL/DaBrVryK9kTGq06GfKrwcSOqypP+fdXGoCHE36b99fWVoA==}

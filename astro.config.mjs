@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import vue from "@astrojs/vue";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
+import robotsTxt from 'astro-robots-txt';
 
 // import netlify from "@astrojs/netlify/functions";
 
@@ -17,7 +18,12 @@ export default defineConfig({
       external: ["svgo"]
     }
   },
-  integrations: [vue(), tailwind(), mdx()],
+  site: 'https://adepranaya.com',
+
+  experimental: {
+    integrations: true,
+  },
+  integrations: [vue(), tailwind(), mdx(), robotsTxt()],
   // output: "server",
   // adapter: netlify()
 });

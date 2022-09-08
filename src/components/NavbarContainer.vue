@@ -26,7 +26,7 @@ const navs = [
   <nav
     class="mx-6 lg:mx-auto lg:max-w-6xl py-6 relative"
   >
-    <button class="ml-auto flex self-end md:hidden" @click="toggleNav">
+    <button class="ml-auto flex self-end md:hidden" @click="toggleNav" aria-label="Toggle Nav">
       <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
         <path
           fill-rule="evenodd"

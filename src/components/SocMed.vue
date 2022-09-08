@@ -34,9 +34,9 @@ const socialMedias = [
 </script>
 
 <template>
-  <div class="flex items-center flex-wrap justify-center md:justify-start">
-    <a v-for="(item, index) in socialMedias" :key="index" :href="item.link" target="_blank" class="mr-5">
-      <i class="text-4xl text-primary" :class="item.icon"></i>
+  <div class="flex items-center flex-wrap justify-center md:justify-start gap-4">
+    <a v-for="(item, index) in socialMedias" :key="index" :href="item.link" target="_blank" :aria-label="item.title">
+      <i class="text-4xl text-primary" :class="item.icon" :alt="item.title"></i>
     </a>
   </div>
 </template>
