@@ -5,7 +5,7 @@ const name = 'Ade Pranaya';
 </script>
 <template>
   <div class="mx-6 lg:mx-auto lg:max-w-6xl py-6">
-    <div class="mt-4 flex items-center mb-4 flex-wrap justify-center">
+    <div class="mt-4 flex items-center mb-4 flex-wrap justify-center md:justify-start gap-4">
       <SocMed></SocMed>
       <span>copyright &copy; {{ currentDate }}. {{ name }}</span>
     </div>

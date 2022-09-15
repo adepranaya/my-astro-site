@@ -1,22 +1,27 @@
 ---
-const posts = await Astro.glob('./*.mdx');
+let posts = await Astro.glob('./*.mdx');
+posts = posts.sort((a, b) => {
+  return Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date);
+});
 import Layout from '../../layouts/default.astro';
 ---
 
 <Layout>
   <h1 class="text-4xl text-primary font-bold">Blog</h1>
-  <p class="mb-8">
-    
-  </p>
+  <p class="mb-8"></p>
   {
     posts.map((post) => (
-      <a href={'/blog/' + post.frontmatter.slug}>
-        <h2 class="font-bold text-3xl text-primary">
-          {post.frontmatter.title}
-        </h2>
-        <span class="text-gray-500">{post.frontmatter.created_at}</span>
-        <p>{post.frontmatter.desc}</p>
-      </a>
+      <div class="mb-4">
+        <a href={post.url}>
+          <div class="border-l-4 pl-4">
+            <h2 class="font-bold text-xl text-primary">
+              {post.frontmatter.title}
+            </h2>
+            <span class="text-gray-500">{post.frontmatter.created_at}</span>
+            <p>{post.frontmatter.desc}</p>
+          </div>
+        </a>
+      </div>
     ))
   }
 </Layout>

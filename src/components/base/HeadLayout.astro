@@ -1,22 +1,34 @@
 ---
 import { SEO } from 'astro-seo';
-const metaDesc =
-  "My name is Ade Pranaya, I graduated from Pasundan University. I am Web Designer / Developer. I am very happy with programming especially in Frontend Development so that's why right now I want to focus as Frontend Developer. U can check my last job";
+let { title, metaDesc } = Astro.props;
+
+const defaultMetaDesc =
+  "My name is Ade Pranaya, I graduated from Pasundan University. I am Frontend Developer. I am very happy with programming especially in Frontend Development so that's why right now I want to focus as Frontend Developer. U can check my last job";
+
+if (!title) title = 'Ade Pranaya';
+if (!metaDesc) metaDesc = defaultMetaDesc;
 ---
+
 <head>
   <meta charset="utf-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <SEO title="Ade Pranaya" description={metaDesc} />
+  <SEO title={title} description={metaDesc} />
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerPolicy="no-referrer" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous"
+    referrerPolicy="no-referrer"
+  />
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/brands.min.css" integrity="sha512-+oRH6u1nDGSm3hH8poU85YFIVTdSnS2f+texdPGrURaJh8hzmhMiZrQth6l56P4ZQmxeZzd2DqVEMqQoJ8J89A==" crossorigin="anonymous" referrerPolicy="no-referrer" /> -->
   <style>
     body {

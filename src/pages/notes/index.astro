@@ -11,15 +11,17 @@ import Layout from '../../layouts/default.astro';
   </p>
   {
     posts.map((post) => (
-      <a href={'/notes/' + post.frontmatter.slug}>
-        <div class="border-l-4 pl-4">
-          <h2 class="font-bold text-xl text-primary">
-            {post.frontmatter.title}
-          </h2>
-          <span class="text-gray-500">{post.frontmatter.created_at}</span>
-          <p>{post.frontmatter.desc}</p>
-        </div>
-      </a>
+      <div class="mb-4">
+        <a href={post.url}>
+          <div class="border-l-4 pl-4">
+            <h2 class="font-bold text-xl text-primary">
+              {post.frontmatter.title}
+            </h2>
+            <span class="text-gray-500">{post.frontmatter.created_at}</span>
+            <p>{post.frontmatter.desc}</p>
+          </div>
+        </a>
+      </div>
     ))
   }
 </Layout>

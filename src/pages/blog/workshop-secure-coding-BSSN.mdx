@@ -1,0 +1,38 @@
+---
+layout: '../../layouts/MDXLayout.astro'
+title: Catatan Saya di Workshop "Secure Coding" oleh BSSN
+desc: 'ketika membuka situs / website biasanya yang dilakukan oleh attacker antara lain...'
+created_at: '4 Februari 2021'
+date: "2021-02-04"
+---
+
+## Pandangan Attacker pada Aplikasi,
+
+ketika membuka situs / website biasanya yang dilakukan oleh attacker antara lain:
+
+1. akses folder ".git" bisa di akses atau nggak contoh: **http://example.com/.git**, bahayanya adalah attacker bisa melihat versioning yang terjadi pada aplikasi kita dan jika ada developer yang **"lengah"** dan biar gampang kerja sama dengan developer lain sehinga ia membagikan konfig / credential nya dan tidak diganti maka ini bisa menyebabkan attacker juga bisa mengakses aplikasi, server dll.
+   - saran/solusi: bisa menggunakan .htacces agar folder / file tertentu tidak boleh diakses oleh orang lain (hanya boleh diakses oleh orang tertentu)
+2. view page source, apakah ada konfigurasi/credential yang disimpan disisi client (frontend),
+   - saran/solusi: terkait credential / konfigurasi yang sifat nya sensitif sebaiknya disimpan di sisi server (backend)
+3. halaman login
+   1. melakukan SQL Injection
+   2. melakukan brute force (BF)
+      - tools: Burp Suite
+      - akibat: bisa jadi kena DOS karena banyak request yang masuk ke server
+      - BF != DDOS
+   - saran/solusi:
+     - capthca
+     - soft token
+4. Halaman Register
+   1. intercept request
+      - tools: Burp Suite
+   2. masukan script (html, javascript), bahayanya bisa mengambil url, ip, cookies (ini bisa menyebakan attacker bisa login sebagai orang lain)
+5. Halaman Edit Profil, bahayanya:
+   1. bisa ganti password orang lain
+   2. foto / upload foto
+      - saran/solusi:
+        1. validasi mime type, ekstention, file size dll
+        2. create ulang filenya
+6. ubah value dari frontend (contoh data harga)
+7. idor? (mengubah params url untuk mengambil data orang lain), ini juga biasa nya digunakan untuk SQL Injection,
+   - saran: params tidak menggunakan integer karena itu mudah ditebak

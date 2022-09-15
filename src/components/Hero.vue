@@ -8,7 +8,7 @@ import SocMed from './SocMed.vue';
       <h1 class="text-4xl md:text-6xl font-bold">
         A<span class="text-primary">dePran</span>aya
       </h1>
-      <div class="text-xl md:text-4xl">web designer/developer</div>
+      <div class="text-xl md:text-4xl">Frontend Developer</div>
       <SocMed></SocMed>
 
       <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
