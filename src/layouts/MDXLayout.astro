@@ -13,8 +13,8 @@ const { frontmatter } = Astro.props;
         <Navbar />
       </div>
       <div class="mb-auto">
-        <article class="prose mx-6 lg:mx-auto lg:max-w-6xl py-6">
-          <h1 class="text-5xl font-bold text-primary mb-1">{frontmatter.title}</h1>
+        <article class="prose mx-6 lg:mx-auto lg:max-w-3xl py-6">
+          <h1 class="text-4xl lg:text-5xl font-bold text-primary mb-1">{frontmatter.title}</h1>
           <h2 class="text-gray-500 mb-4">{frontmatter.created_at}</h2>
           <slot />
           <!-- your content is injected here -->

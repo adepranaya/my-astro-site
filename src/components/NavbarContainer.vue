@@ -31,7 +31,7 @@ const checkNav = (title: string) => {
 </script>
 
 <template>
-  <nav class="mx-6 lg:mx-auto lg:max-w-6xl py-6 relative">
+  <nav class="mx-6 lg:mx-auto lg:max-w-5xl py-6 relative">
     <button
       class="ml-auto flex self-end md:hidden"
       @click="toggleNav"

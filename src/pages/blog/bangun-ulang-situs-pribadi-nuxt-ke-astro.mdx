@@ -1,25 +1,30 @@
 ---
-layout: '../../layouts/MDXLayout.astro' 
+layout: '../../layouts/MDXLayout.astro'
 title: 'Bangun Ulang Situs Pribadi dari Nuxt ke Astro Framework'
 desc: 'Halo guys, pada kesempatan kali ini saya ingin bercerita terkait situs pribadi ku ini yang awal mula nya menggunakan Nuxt Framework, sekarang dibangun ulang dengan menggunakan Astro Framework...'
 created_at: '5 Agustus 2022'
-date: "2022-08-05"
+date: '2022-08-05'
 ---
 
 Halo guys, pada kesempatan kali ini saya ingin bercerita terkait situs pribadi ku ini yang awal mula nya menggunakan Nuxt Framework, sekarang dibangun ulang dengan menggunakan Astro Framework
 
 ## Kenapa Menggunakan Framework
+
 bagi yang biasa menggunakan framework pasti tau ya alasannya, salah satunya adalah untuk memudahkan dan mempercepat pekerjaan kita, kenapa ga wordpress aja? atau website builder? bukannya lebih cepat?
-yaps memang betul tetapi bukan hanya itu tujuan saya, selain ingin memudahkan dan mempercepat pekerjaan juga sebagai ajang untuk mengasah kemampuan saya dalam perkodingan, slicing dan mencoba teknologi-teknologi yang saya minati dalam kasus ini **~~Nuxt~~, Astro , Tailwindcss** dalam pembangun **situs pribadi** saya 
+yaps memang betul tetapi bukan hanya itu tujuan saya, selain ingin memudahkan dan mempercepat pekerjaan juga sebagai ajang untuk mengasah kemampuan saya dalam perkodingan, slicing dan mencoba teknologi-teknologi yang saya minati dalam kasus ini **~~Nuxt~~, Astro , Tailwindcss** dalam pembangun **situs pribadi** saya
 
 ## Kenapa Nuxt js
+
 Dulu saat framework javascript baru keluar saya baru tau ada yang namanya Single Page Application (SPA) dan itu menarik perhatian saya, karena pekerjaan sehari-hari saya sebagai frontend developer sering menggunakan **vue js** dan **nuxt js** based on it makanya saya memutuskan untuk menggunakannya dan pas dicoba itu rasanya memudahkan banget salah satu yang aku suka sih auto import komponen nya dengan catatan dari sisi perkodingannya ya, masih banyak lagi fitur-fitur yang disediakan oleh nuxt js ini, cek aja di https://nuxtjs.org/ bahkan nuxt nya sendiri mau udah mau upgrade nih ke versi 3 👏🏻 walaupun mungkin prediksi saya di tahun 2023 baru stable
 
 ## Kenapa Memutuskan tidak menggunakan Nuxt JS
+
 Seiring dengan berjalannya waktu saya merasa Nuxt JS ini terlalu **over power** untuk situs pribadi saya yang sangat sederhana ini dimana tujuan awal nya hanya menceritakan secara singkat tentang portfolio pekerjaan saya yang mana itu bisa jadi hanya 1~2 halaman saja **ibarat kate nih ye** _"kita mau bunuh nyamuk tapi pake nya bazoka" (ini saya kutip dari kata kata dosen pembimbing saya dulu saat skripsi 🤣)_ tapi bener juga kan, sayang aja gitu rasanya nya kalau banyak sekali fitur fitur yang tidak digunakan
 
 ## Pemilihan Framework baru
+
 Dalam pencarian framework baru dan keteguhan ingin tetap ingin menggunakan framework ada beberapa kriteria yang dicari
+
 1. mudah dipelajari
 2. kalau bisa tidak bikin ulang dari awal
 3. ringan
@@ -28,7 +33,8 @@ Dalam pencarian framework baru dan keteguhan ingin tetap ingin menggunakan frame
 ketemu lah beberapa framework yang menurut saya sesuai dengan kebutuhan saya yaitu [solid js](https://www.solidjs.com/) dan [astro framework](https://astro.build/),
 
 ## Solid JS
-kalau kita kunjungi website nya https://www.solidjs.com/ kita akan disajikan dengan tagline *"Simple and performant reactivity for building user interfaces."*. ketika scroll lagi diperlihatkan bahwa size nya itu relatice kecil banget hanya 7kb syntaxnya yang familiar yaitu menggunakan *.jsx* kalau kita pernah pake react pasti ga asing dengan syntax nya, dan kecepatannya yang wow banget hampir mendekati vanilla javascript atau javascript murni ![solid js time](/assets/bangun-ulang-situs-pribadi-nuxt-ke-astro/solidjs-time.png)
+
+kalau kita kunjungi website nya https://www.solidjs.com/ kita akan disajikan dengan tagline _"Simple and performant reactivity for building user interfaces."_. ketika scroll lagi diperlihatkan bahwa size nya itu relatice kecil banget hanya 7kb syntaxnya yang familiar yaitu menggunakan _.jsx_ kalau kita pernah pake react pasti ga asing dengan syntax nya, dan kecepatannya yang wow banget hampir mendekati vanilla javascript atau javascript murni ![solid js time](/assets/bangun-ulang-situs-pribadi-nuxt-ke-astro/solidjs-time.png)
 
 1. [x] mudah dipelajari
 2. [ ] kalau bisa tidak bikin ulang dari awal
@@ -36,7 +42,45 @@ kalau kita kunjungi website nya https://www.solidjs.com/ kita akan disajikan den
 4. [x] cepat
 
 ## Astro Framework
-*"Build faster websites."* https://astro.build/
-Dipikiran saya framework ini kurang lebih sama dengan framework framework lain dengan keunggulan dan kelemahannya masing-masing.
 
-... *sorry ceritanya sampai sini dulug* nanti akan diupdate sesegera mungkin 🙏🏻
+_"Build faster websites."_ https://astro.build/
+Dipikiran saya framework ini kurang lebih sama dengan framework framework lain dengan keunggulan dan kelemahannya masing-masing. tetapi ini beda banget selain dari size nya yang kecil dikatakan bahwa dia menggunakan island architecture yang mana itu baru terdengar oleh saya dan ia berfokus pada konten kalau saya pikir-pikir iya juga ya kayanya kalo bikin situs pribadi lebih fokus ke konten nya deh, jadi saya scroll-scroll lagi deh, berikut adalah beberapa tujuan astro framework di design:
+
+1. Designed for speed,
+   - "Astro Island mewakili perubahan paradigma terkemuka untuk arsitektur web frontend. Astro mengekstrak UI Kita menjadi komponen yang lebih kecil dan terisolasi di halaman.JavaScript yang tidak digunakan **diganti dengan HTML ringan**, menjamin pemuatan yang **lebih cepat dan time-to-interactive (TTI)**." _masuk akal kan ya kenapa dia jadi ringan banget_
+2. Designed for content
+   - Kita bisa mengambil konten dari sistem file atau ambil dari CMS, database, atau API favorit Kita. dan ia juga support **SSG** dan **SSR**
+3. Designed to feel familiar
+   - Nah ini yang paling wow menurut saya yaitu kita bisa menggunakan komponen framework yang biasa kita gunakan, dalam kasus ini karena saya sebelumnya pake nuxt yanga mana dibangun diatas vue, bahkan komponen solid js pun bisa kita gunakan ke dalam asto js ini,berikut beberapa ui frameworks yang didukung antara lain:
+     1. @astrojs/alpinejs
+     1. @astrojs/lit
+     1. @astrojs/preact
+     1. @astrojs/react
+     1. @astrojs/solidjs
+     1. @astrojs/svelte
+     1. @astrojs/vue ✅
+4. Designed to scale
+   - "Deploy to anywhere, even the edge", cloudflare, deno, netlify, github, node server, vercel, google cloud, aws.
+5. Designed to grow with you
+   - Astro memiliki sebuah ekosistem yang teridiri dari 100+ integration & themes juga package package untuk meningkatkan performa, seo, analytics dan lain-lain jadi dipake seperlunya aja ya
+6. Designed for everyone
+   - Astro memiliki komunitas di discord
+
+untuk lebih detailnya kalian cek aja diwebsite nya tadi ya
+
+1. [x] mudah dipelajari
+2. [x] kalau bisa tidak bikin ulang dari awal (karena bisa langsung copy paste component vue
+3. [x] ringan
+4. [x] cepat
+
+## Keputusan akhir
+
+Dari beberapa kriteria untuk mencari framework baru untuk situs pribadi saya, maka diputuskan pemilihannya jatuh kepada **Astro Framework** 👏🏻🎉🥳.
+
+## Kesimpulan
+
+Pergantian framework disini **bukan berarti** framework lama lebih jelek daripada yang baru ya, melainkan justru Nuxt JS sangat powerful untuk berbagai macam kasus dalam pembangunan aplikasi web, Astro Framework dipilih karena selain beberapa kriteria pencarian tadi, juga ia di designed emang untuk kita yang mau membangun website secara cepat dan berfokus dalam pembuatan konten yang mana menurut saya ini lebih cocok saya gunakan untuk situs pribadi saya, selain itu kita bisa gunakan komponen yang sudah ada kedalam astro js ini, yaitu vue bahkan dikemudian hari mungkin saya akan mencoba solid js juga kedalam astro ini agar 1x dayung 2 pulau terlampaui, belajar solid js nya iya di share juga ia karena situs pribadi saya udah live production 😁
+
+## Penutup 
+
+itu saja tulisan saya terkait **bangun ulang situs pribadi dari Nuxt ke Astro Framework** mohon maaf jika ada kesalahan kata, Semoga Bermanfaat. 👏🏻
