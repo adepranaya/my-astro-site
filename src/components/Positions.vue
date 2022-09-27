@@ -3,7 +3,7 @@
     <div class="w-full relative">
       <div class="flex flex-col relative z-10 min-h-full">
         <!-- <back-button></back-button> -->
-        <h1 class="text-4xl md:text-6xl font-bold">Positions</h1>
+        <h1 class="text-4xl md:text-6xl font-bold">Work Experiences</h1>
         <div class="flex-1 max-h-full">
           <div class="grid grid-cols-1 mt-6">
             <div
