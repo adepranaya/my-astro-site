@@ -1,0 +1,23 @@
+---
+layout: '../../layouts/MDXLayout.astro' 
+title: Flutter Command blank or no response
+desc: 'i'm not get any response, it's like blank or waiting forever...'
+created_at: '09 April 2023'
+slug: notes
+---
+
+when i run
+
+```cmd
+flutter upgrade
+```
+i'm not get any response, it's like blank or waiting forever
+
+base on https://www.appsloveworld.com/flutter/100/8/flutter-doctor-hangs-on-start-no-output so the solution is delete folder in your flutter SDK path 
+```cmd
+rm -rf flutter/bin/cache
+```
+then check it
+```cmd
+flutter --version
+```
