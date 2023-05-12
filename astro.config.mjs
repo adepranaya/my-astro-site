@@ -1,8 +1,9 @@
 import { defineConfig } from 'astro/config';
-import vue from "@astrojs/vue";
-import tailwind from "@astrojs/tailwind";
-import mdx from "@astrojs/mdx";
+import vue from '@astrojs/vue';
+import tailwind from '@astrojs/tailwind';
+import mdx from '@astrojs/mdx';
 import robotsTxt from 'astro-robots-txt';
+import partytown from '@astrojs/partytown';
 
 // import netlify from "@astrojs/netlify/functions";
 
@@ -10,20 +11,31 @@ import robotsTxt from 'astro-robots-txt';
 export default defineConfig({
   markdown: {
     shikiConfig: {
-      theme: 'dracula'
-    }
+      theme: 'dracula',
+    },
   },
   vite: {
     ssr: {
-      external: ["svgo"]
-    }
+      external: ['svgo'],
+    },
   },
   site: 'https://adepranaya.com',
 
   experimental: {
     integrations: true,
   },
-  integrations: [vue(), tailwind(), mdx(), robotsTxt()],
+  integrations: [
+    vue(),
+    tailwind(),
+    mdx(),
+    robotsTxt(),
+    partytown({
+      // Adds dataLayer.push as a forwarding-event.
+      config: {
+        forward: ['dataLayer.push'],
+      },
+    }),
+  ],
   // output: "server",
   // adapter: netlify()
 });
