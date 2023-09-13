@@ -1,25 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import navConstant from './../constants/nav.constant.js'
 const props = defineProps<{
   currentPath: string;
 }>();
 const isOpen = ref(false);
 const toggleNav = () => (isOpen.value = !isOpen.value);
 
-const navs = [
-  {
-    link: '/',
-    title: 'home',
-  },
-  {
-    link: '/blog',
-    title: 'blog',
-  },
-  // {
-  //   'link' : '/notes',
-  //   'title' : 'notes'
-  // }
-];
+const navs = navConstant;
 
 const checkNav = (title: string) => {
   if (props.currentPath === '' && title === 'home') {
