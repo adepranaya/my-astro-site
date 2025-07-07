@@ -1,37 +1,36 @@
 ---
 const techStacks = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'Angular',
-  'React JS',
-  'React Native',
-  'Vue JS',
-  'Nuxt JS',
-  'Electron JS',
-  'Java',
-  'PHP',
-  'Laravel',
-  'Codeigniter',
-  'Bootstrap',
-  'Tailwind CSS',
-  'Git',
-  'Ionic',
-  'Web Service',
-  'Python',
-  'Go',
-  'Docker',
-  'Flutter',
-
+  { name: 'HTML 5', icon: 'https://api.iconify.design/logos:html-5.svg' },
+  { name: 'CSS 3', icon: 'https://api.iconify.design/logos:css-3.svg' },
+  { name: 'JavaScript', icon: 'https://api.iconify.design/logos:javascript.svg' },
+  { name: 'Angular', icon: 'https://api.iconify.design/logos:angular-icon.svg' },
+  { name: 'React', icon: 'https://api.iconify.design/logos:react.svg' },
+  { name: 'React Native', icon: 'https://api.iconify.design/logos:react.svg' },
+  { name: 'Vue JS', icon: 'https://api.iconify.design/logos:vue.svg' },
+  { name: 'Nuxt JS', icon: 'https://api.iconify.design/logos:nuxt-icon.svg' },
+  { name: 'Electron JS', icon: 'https://api.iconify.design/logos:electron.svg' },
+  { name: 'Java', icon: 'https://api.iconify.design/logos:java.svg' },
+  { name: 'PHP', icon: 'https://api.iconify.design/logos:php.svg' },
+  { name: 'Laravel', icon: 'https://api.iconify.design/logos:laravel.svg' },
+  { name: 'Codeigniter', icon: 'https://api.iconify.design/logos:codeigniter-icon.svg' },
+  { name: 'Bootstrap', icon: 'https://api.iconify.design/logos:bootstrap.svg' },
+  { name: 'Tailwindcss', icon: 'https://api.iconify.design/logos:tailwindcss-icon.svg' },
+  { name: 'Git', icon: 'https://api.iconify.design/logos:git-icon.svg' },
+  { name: 'Ionic', icon: 'https://api.iconify.design/logos:ionic-icon.svg' },
+  { name: 'Python', icon: 'https://api.iconify.design/logos:python.svg' },
+  { name: 'Go', icon: 'https://api.iconify.design/logos:go.svg' },
+  { name: 'Docker', icon: 'https://api.iconify.design/logos:docker-icon.svg' },
+  { name: 'Flutter', icon: 'https://api.iconify.design/logos:flutter.svg' },
 ];
-
 ---
-
+<h3 class="text-2xl text-primary mb-2">Tech Stack</h3>
+<p class="mb-1">I have hands-on experience across a modern web development stack, including:</p>
 <div class="flex gap-2 flex-wrap">
   {
     techStacks.map((item) => (
-      <div class=" p-1 text-sm bg-primary text-white rounded-lg">
-        {item}
+      <div class=" py-1 px-2 text-sm border border-primary rounded-lg flex gap-2 items-center">
+        <img src={item.icon} alt="" height="18" loading="lazy">
+        <span>{item.name}</span>
       </div>
     ))
   }

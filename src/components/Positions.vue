@@ -25,7 +25,11 @@
                   v-if="typeof el.deskripsi === 'object'"
                   class="list-disc ml-4"
                 >
-                  <li v-for="(desc, iD) in el.deskripsi" :key="iD" class="mb-2 break-normal">
+                  <li
+                    v-for="(desc, iD) in el.deskripsi"
+                    :key="iD"
+                    class="mb-2 break-normal"
+                  >
                     {{ desc }}
                   </li>
                 </ul>
@@ -34,9 +38,12 @@
                   <li
                     v-for="(tech, iT) in el.teknologi"
                     :key="iT"
-                    class="inline-block bg-primary text-white mr-4 mt-4 p-1 rounded text-sm"
+                    class="inline-block border border-primary mr-4 mt-1 p-1 rounded text-sm"
                   >
-                    {{ tech }}
+                    <div class="flex gap-2">
+                      <img v-if="tech.icon" :src="tech.icon" alt="" height="18" />
+                      <span>{{ tech.name }}</span>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -60,19 +67,68 @@ export default {
         {
           sebagai: 'Frontend Developer',
           deskripsi: 'PT Bangunindo Teknusa Jaya, Jakarta',
-          teknologi: ['Vue JS', 'Nuxt JS', 'Codeigniter'],
+          teknologi: [
+            {
+              name: 'Vue JS',
+              icon: 'https://api.iconify.design/logos:vue.svg',
+            },
+            {
+              name: 'Nuxt JS',
+              icon: 'https://api.iconify.design/logos:nuxt-icon.svg',
+            },
+            {
+              name: 'Codeigniter',
+              icon: 'https://api.iconify.design/logos:codeigniter-icon.svg',
+            },
+          ],
           tanggal: '2022 - now',
         },
         {
           sebagai: 'Frontend Developer',
           deskripsi: 'PT Kunci Teknologi Digital, Bandung',
-          teknologi: ['Vue JS', 'Nuxt JS'],
+          teknologi: [
+            {
+              name: 'Vue JS',
+              icon: 'https://api.iconify.design/logos:vue.svg',
+            },
+            {
+              name: 'Nuxt JS',
+              icon: 'https://api.iconify.design/logos:nuxt-icon.svg',
+            },
+            {
+              name: 'Laravel',
+              icon: 'https://api.iconify.design/logos:laravel.svg',
+            },
+          ],
           tanggal: '2019 - 2022',
         },
         {
           sebagai: 'Mentor Private Class',
           deskripsi: 'Web Development',
-          teknologi: ['PHP'],
+          teknologi: [
+            { name: 'PHP', icon: 'https://api.iconify.design/logos:php.svg' },
+
+            {
+              name: 'HTML',
+              icon: 'https://api.iconify.design/logos:html-5.svg',
+            },
+            {
+              name: 'CSS',
+              icon: 'https://api.iconify.design/logos:css-3.svg',
+            },
+            {
+              name: 'JavaScript',
+              icon: 'https://api.iconify.design/logos:javascript.svg',
+            },
+            {
+              name: 'Laravel',
+              icon: 'https://api.iconify.design/logos:laravel.svg',
+            },
+            {
+              name: 'Bootstrap',
+              icon: 'https://api.iconify.design/logos:bootstrap.svg',
+            },
+          ],
           tanggal: '2020 - now',
         },
         {
@@ -84,19 +140,46 @@ export default {
             'Create skin clinic at Naifah',
             "Create 'Sistem Informasi Data Kepegawaian (SIDAKEP) Dinkes Jabar'",
           ],
-          teknologi: ['Laravel', 'React JS', 'Electron'],
+          teknologi: [
+            {
+              name: 'Laravel',
+              icon: 'https://api.iconify.design/logos:laravel.svg',
+            },
+            {
+              name: 'React JS',
+              icon: 'https://api.iconify.design/logos:react.svg',
+            },
+            {
+              name: 'Electron',
+              icon: 'https://api.iconify.design/logos:electron.svg',
+            },
+          ],
           tanggal: '2018 - now',
         },
         {
           sebagai: 'Co – Trainer Workshop Professional Web Programming',
           deskripsi: 'Create Website using Bootstrap 4.0 and CodeIgniter',
-          teknologi: ['Bootstrap 4.0', 'CodeIgniter 2'],
+          teknologi: [
+            {
+              name: 'Bootstrap 4.0',
+              icon: 'https://api.iconify.design/logos:bootstrap.svg',
+            },
+            {
+              name: 'CodeIgniter 2',
+              icon: 'https://api.iconify.design/logos:codeigniter-icon.svg',
+            },
+          ],
           tanggal: '2019',
         },
         {
           sebagai: 'Frontend Developer',
           deskripsi: 'Internship at PT Titik Terang Teknologi, Bandung',
-          teknologi: ['Laravel'],
+          teknologi: [
+            {
+              name: 'Laravel',
+              icon: 'https://api.iconify.design/logos:laravel.svg',
+            },
+          ],
           tanggal: '2018',
         },
         {

@@ -34,8 +34,8 @@ import SocMed from './SocMed.vue';
     </div>
     <div class="self-center mb-4">
       <picture>
-        <source media="(max-width:465px)" srcset="/assets/profile.webp" />
-        <img src="/assets/profile.webp" alt width="24rem" height="24rem" class="w-96" />
+        <source media="(max-width:465px)" srcset="/assets/profile-2.png" />
+        <img src="/assets/profile-2.png" alt="profile ade pranaya" width="24rem" height="24rem" class="w-96" />
       </picture>
     </div>
   </div>

@@ -4,13 +4,13 @@ posts = posts.sort((a, b) => {
   return Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date);
 });
 import Layout from '../../layouts/default.astro';
+import {formatTanggalIndo} from '../../utils/date.js';
 ---
 
 <Layout>
   <h1 class="text-4xl text-primary font-bold mb-4">Blog</h1>
   <p class="mb-8">
-    This page for my dev notes like errors, tips, story, etc. If you get the benefits
-    I'm participating
+    This page serves as my personal repository for dev notes, including encountered errors, helpful tips, and project stories. If you find value in what I share, I'm keen to connect regarding potential job opportunities or project collaborations where my skills can make an impact.
   </p>
   {
     posts.map((post) => (
@@ -20,7 +20,7 @@ import Layout from '../../layouts/default.astro';
             <h2 class="font-bold text-xl text-primary">
               {post.frontmatter.title}
             </h2>
-            <span class="text-gray-500">{post.frontmatter.created_at}</span>
+            <span class="text-gray-500">{formatTanggalIndo(post.frontmatter.date)}</span>
             <p>{post.frontmatter.desc}</p>
           </div>
         </a>
