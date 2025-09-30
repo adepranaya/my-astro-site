@@ -30,6 +30,7 @@ export default defineConfig({
     mdx(),
     robotsTxt(),
     partytown({
+      config: { debug: false },
       // Adds dataLayer.push as a forwarding-event.
       config: {
         forward: ['dataLayer.push'],
