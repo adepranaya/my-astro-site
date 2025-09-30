@@ -8,6 +8,12 @@ module.exports = {
       colors: {
         primary: '#02474F',
         secondary: '#4EA5D9',
+// ',
+        // secondary: '#E1CDB5',
+        // secondary: '#84C318',
+        "robbin-egg-blue": '#44CFCB',
+        "mountbatten-pink": '#90708C',
+        dun: '#E1CDB5',
         darkGray: '#212223',
       },
     },

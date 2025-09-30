@@ -20,11 +20,11 @@ const socialMedias = [
     link: 'https://www.github.com/adepranaya',
     icon: 'fa-brands fa-github',
   },
-  {
-    title: 'Github',
-    link: 'https://www.github.com/depran7',
-    icon: 'fa-brands fa-github',
-  },
+  // {
+  //   title: 'Github',
+  //   link: 'https://www.github.com/depran7',
+  //   icon: 'fa-brands fa-github',
+  // },
   {
     title: 'Github',
     link: 'https://www.gitlab.com/ade.pranaya',

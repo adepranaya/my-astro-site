@@ -6,19 +6,95 @@ posts = posts.sort((a, b) => {
 });
 import Layout from '../../layouts/default.astro';
 import {formatTanggalIndo} from '../../utils/date.js';
+
+const profesionals = [
+  {
+    name: 'Freelance',
+    projects: [
+      {
+        link: 'https://ahlulquran.id'
+      },
+      {
+        link: 'https://collarx.com'
+      },
+      {
+        link: 'https://ayamjuber.id'
+      },
+      {
+        link: 'https://princheese-elsa.com'
+      },
+      {
+        link: 'https://miyukihalalstore.com'
+      },
+      {
+        link: 'https://bumdes-stock.codelillah.com'
+      },
+      {
+        link: 'https://laundrylah.codelillah.com'
+      }
+    ]
+  }
+]
+const hobbies = [
+  {
+    name: 'Helpers',
+    projects: [
+      {
+        link: 'https://k-ekin.netlify.app'
+      },
+    ]
+  },
+  {
+    name: 'Slicing',
+    projects: [
+      {
+        link: 'https://daunku.netlify.app'
+      },
+      {
+        link: 'https://review-books.netlify.app'
+      },
+      {
+        link: 'https://jobsee.netlify.app'
+      },
+      {
+        link: 'https://paitcoffee.netlify.app'
+      },
+      {
+        link: 'https://depran7-gf-clone.netlify.app'
+      },
+    ]
+  },
+  {
+    name: 'Others',
+    projects: [
+      {
+        link: 'https://decemilanaa.netlify.app'
+      },
+      {
+        link: 'https://lancers.netlify.app'
+      },
+      {
+        link: 'https://latolato.netlify.app'
+      },
+      {
+        link: 'https://deinnuna.netlify.app'
+      },
+      {
+        link: 'https://adepranaya-todo-vue3.netlify.app'
+      },
+    ]
+  },
+  
+  
+]
 ---
 
 <Layout>
   <h1 class="text-4xl text-primary font-bold mb-4">Projects</h1>
-  <h2 class="text-2xl mb-8">
+  <p class="text-2xl mb-8">
     🚧 This page is under development... 🚧
-  </h2>
-  <p> if you want to connect with me, please feel free to contact me on social media </p>
-  <ul class="list-disc pl-4 mt-1">
-    <li><a href="https://www.linkedin.com/in/ade-pranaya-567733113/" class="text-secondary underline hover:text-primary">Linkedln</a></li>
-    <li><a href="https://instagram.com/depran7" class="text-secondary underline hover:text-primary">Instagram</a></li>
-    <li><a href="mailto:adepranaya@gmail.com" class="text-secondary underline hover:text-primary">Email</a></li>
-  </ul>
+  </p>
+  
   {
     posts.map((post) => (
       <div class="mb-4">
@@ -34,4 +110,45 @@ import {formatTanggalIndo} from '../../utils/date.js';
       </div>
     ))
   }
+
+  <hr class="my-2">
+  <h2 class="font-bold text-2xl mt-8 text-primary"> Profesinoal </h2>
+
+  <p>Most of the projects I build are private, if you want to know more about me, please feel free to contact me on social media </p>
+  <ul class="list-disc pl-4 mt-1">
+    <li><a href="https://www.linkedin.com/in/ade-pranaya-567733113/" class="text-secondary underline hover:text-primary">Linkedln</a></li>
+    <li><a href="https://instagram.com/depran7" class="text-secondary underline hover:text-primary">Instagram <strong>(Fast Response)</strong></a></li>
+    <li><a href="mailto:adepranaya@gmail.com" class="text-secondary underline hover:text-primary">Email</a></li>
+  </ul>
+    {
+      profesionals.map((hobby) => (
+        <div class="mb-4">
+          <h3 class="font-bold text-lg text-primary">{hobby.name}</h3>
+          <ul>
+            {
+              hobby.projects.map((project) => (
+                <li><a href={project.link} class="text-secondary underline hover:text-primary" target="_blank">{project.link}</a></li>
+              ))
+              }
+          </ul>
+        </div>
+      ))
+    }
+  <hr class="my-2">
+  <h2 class="font-bold text-2xl mt-8 text-primary"> Hobbies </h2>
+    {
+      hobbies.map((hobby) => (
+        <div class="mb-4">
+          <h3 class="font-bold text-lg text-primary">{hobby.name}</h3>
+          <ul>
+            {
+              hobby.projects.map((project) => (
+                <li><a href={project.link} class="text-secondary underline hover:text-primary" target="_blank">{project.link}</a></li>
+              ))
+              }
+          </ul>
+        </div>
+      ))
+    }
+
 </Layout>

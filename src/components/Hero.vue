@@ -10,13 +10,13 @@ import SocMed from './SocMed.vue';
       <h1 class="text-4xl md:text-6xl font-bold">
         A<span class="text-primary">dePran</span>aya
       </h1>
-      <div class="text-xl md:text-4xl">Frontend Developer</div>
+      <div class="text-lg">Frontend Developer | Content Creator</div>
       <SocMed></SocMed>
 
       <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
         <a
           class="bg-primary text-white font-semibold py-2 px-4 border-2 border-transparent hover:bg-gray-900 hover:border-transparent rounded-full flex-1 uppercase sm:mb-0 sm:mr-2 text-center cursor-pointer"
-          href="mailto:adepranaya@gmail.com"
+          href="https://instagram.com/depran7"
           >contact me</a
         >
         <!-- href="mailto:adepranaya@gmail.com?subject=I want hire you!&body=Hello Ade!, my name is ..." -->
@@ -34,8 +34,8 @@ import SocMed from './SocMed.vue';
     </div>
     <div class="self-center mb-4">
       <picture>
-        <source media="(max-width:465px)" srcset="/assets/profile-2.png" />
-        <img src="/assets/profile-2.png" alt="profile ade pranaya" width="24rem" height="24rem" class="w-96" />
+        <source media="(max-width:465px)" srcset="/assets/profile-3.png" class="rounded-full" />
+        <img src="/assets/profile-3.png" alt="profile ade pranaya" width="24rem" height="24rem" class="w-[30rem]" />
       </picture>
     </div>
   </div>

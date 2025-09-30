@@ -56,7 +56,7 @@ const checkNav = (title: string) => {
 
       <a
         class="md:flex hover:bg-gray-900-primary bg-primary text-white rounded-full py-2 px-4"
-        href="mailto:adepranaya@gmail.com?subject=I want hire you!&body=Hello Ade!, my name is ..."
+        href="https://instagram.com/depran7"
         >Contact Me</a
       >
     </div>
