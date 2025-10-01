@@ -1513,7 +1513,7 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
     }
     _push(`<ul><!--[-->`);
     ssrRenderList(el.teknologi, (tech, iT) => {
-      _push(`<li class="inline-block bg-primary text-white mr-4 mt-4 p-1 rounded text-sm">${ssrInterpolate(tech)}</li>`);
+      _push(`<li class="inline-block bg-primary text-white mr-4 mt-4 p-1 rounded-sm text-sm">${ssrInterpolate(tech)}</li>`);
     });
     _push(`<!--]--></ul></div></div>`);
   });
@@ -2408,7 +2408,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     }
     _push(`<ul><!--[-->`);
     ssrRenderList(el.teknologi, (tech, iT) => {
-      _push(`<li class="inline-block bg-primary text-white mr-4 mt-4 p-1 rounded text-sm">${ssrInterpolate(tech)}</li>`);
+      _push(`<li class="inline-block bg-primary text-white mr-4 mt-4 p-1 rounded-sm text-sm">${ssrInterpolate(tech)}</li>`);
     });
     _push(`<!--]--></ul></div>`);
   });

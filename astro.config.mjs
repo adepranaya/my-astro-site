@@ -1,9 +1,10 @@
 import { defineConfig } from 'astro/config';
 import vue from '@astrojs/vue';
-import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import robotsTxt from 'astro-robots-txt';
 import partytown from '@astrojs/partytown';
+
+import tailwindcss from '@tailwindcss/vite';
 
 // import netlify from "@astrojs/netlify/functions";
 
@@ -18,11 +19,12 @@ export default defineConfig({
     ssr: {
       external: ['svgo'],
     },
+
+    plugins: [tailwindcss()]
   },
   site: 'https://adepranaya.com',
   integrations: [
     vue(),
-    tailwind(),
     mdx(),
     robotsTxt(),
     partytown({

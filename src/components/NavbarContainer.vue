@@ -33,7 +33,7 @@ const checkNav = (title: string) => {
       </svg>
     </button>
     <div
-      :class="isOpen ? 'flex absolute w-full bg-white shadow p-2' : 'hidden'"
+      :class="isOpen ? 'flex absolute w-full bg-white shadow-sm p-2' : 'hidden'"
       class="flex items-start flex-col md:flex md:flex-row gap-2 uppercase md:justify-between md:items-center"
     >
       <ul class="md:flex flex-col md:flex-row md:gap-2 md:w-1/2">

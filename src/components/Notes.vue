@@ -28,7 +28,7 @@
                 <li
                   v-for="(tech, iT) in el.teknologi"
                   :key="iT"
-                  class="inline-block bg-primary text-white mr-4 mt-4 p-1 rounded text-sm"
+                  class="inline-block bg-primary text-white mr-4 mt-4 p-1 rounded-sm text-sm"
                 >
                   {{ tech }}
                 </li>

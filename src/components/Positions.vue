@@ -38,7 +38,7 @@
                   <li
                     v-for="(tech, iT) in el.teknologi"
                     :key="iT"
-                    class="inline-block border border-primary mr-4 mt-1 p-1 rounded text-sm"
+                    class="inline-block border border-primary mr-4 mt-1 p-1 rounded-sm text-sm"
                   >
                     <div class="flex gap-2">
                       <img v-if="tech.icon" :src="tech.icon" alt="" height="18" />
