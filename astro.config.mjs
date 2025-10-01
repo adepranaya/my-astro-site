@@ -20,20 +20,20 @@ export default defineConfig({
     },
   },
   site: 'https://adepranaya.com',
-
-  experimental: {
-    integrations: true,
-  },
   integrations: [
     vue(),
     tailwind(),
     mdx(),
     robotsTxt(),
     partytown({
-      config: { debug: false },
       // Adds dataLayer.push as a forwarding-event.
       config: {
-        forward: ['dataLayer.push'],
+        debug: true,
+        forward: [
+          ['dataLayer.push', { preserveBehavior: true }],
+          // ['fbq', { preserveBehavior: false }],
+          'gtm.push',
+        ],
       },
     }),
   ],
